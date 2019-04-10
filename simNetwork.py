@@ -42,9 +42,9 @@ ntrials_train           = 5
 ntrials_test            = 5
 
 simulation                          = sim.integroDifferential_simulator()
-(training_samples, testing_samples) = simulation.simulate_spiking_network_dynamics(ntrials_train, 
-                                                                                   ntrials_test, 
-                                                                                   simulation_params)
+(training_samples, testing_samples) = simulation.simulate_spiking_network_dynamics(ntrials_train=ntrials_train,
+                                                                                   ntrials_test=ntrials_test,
+                                                                                   simulation_params=simulation_params)
 
 plotOn                  = True      
 

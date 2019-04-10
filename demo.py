@@ -61,7 +61,7 @@ ntrials_test                                        = 5
 simulation                                          = sim.integroDifferential_simulator()
 print( 'Generating {:d} simulation samples'.format(ntrials_train + ntrials_test) )
 utility.tic()
-(training_samples, testing_samples, ground_truth)   = simulation.simulate_network_dynamics(ntrials_train, ntrials_test, simulation_params)
+(training_samples, testing_samples, ground_truth)   = simulation.simulate_spiking_network_dynamics(ntrials_train, ntrials_test, simulation_params)
 utility.toc()
 
 """

@@ -102,7 +102,8 @@ def plot_connectivity_empirical(connectivity, time_range):
 #
 def plot_connectivity(ground_truth, connectivity, time_range, t0):
     if ground_truth == []:
-        plot_connectivity_empirical(connectivity, time_range, t0)
+        plot_connectivity_empirical(connectivity, time_range)
+        #plot_connectivity_empirical(connectivity, time_range, t0)
     else:
         ylim_max = 1.5 * np.max(ground_truth)
         ylim_min = -1.0 * np.max(ground_truth)

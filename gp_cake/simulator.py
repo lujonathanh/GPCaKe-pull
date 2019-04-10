@@ -213,6 +213,9 @@ class integroDifferential_simulator(object):
                                           ntrials_train, 
                                           ntrials_test, 
                                           params):
+
+        print("Params:")
+        print(params)
         
         adj_mat                     = params['network']
         time_step                   = params['time_step']
@@ -248,7 +251,7 @@ class integroDifferential_simulator(object):
                         "membrane_potentials"   : self.membrane_potentials[ntrials_train:],
                         "firing_probabilities"  : self.firing_probabilities[ntrials_train:]}
         
-        return (trials_train, trials_test)
+        return trials_train, trials_test
     
     def get_epsp_kernel(self,dt): 
         
@@ -277,4 +280,5 @@ class integroDifferential_simulator(object):
                         
         # declare sigmoidal activation function                    
         sigma  = lambda m: fMax * 1/(1 + np.exp(-gain*(m - thresh)))*dt
+
         return sigma
